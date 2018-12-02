@@ -1,0 +1,13 @@
+<h3>new page</h3>
+<%= form_with(model:@blog, local:true, url:blogs_path, method: :post) do | f | %>
+  <div><%= f.label :title %></div>
+  <div><%= f.text_field :title %> </div>
+
+  <div><%= f.label :content %></div>
+  <div><%= f.text_area :content %></div>
+
+  <%= f.submit %> 
+
+<% end %>
+
+<%= link_to 'back', root_path %>
